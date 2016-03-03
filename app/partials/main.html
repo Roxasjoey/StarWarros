@@ -1,0 +1,15 @@
+<h2>Lista de personajes</h2>
+<button ng-click="invite()">Crear personaje</button>
+<div ng-repeat="guest in guests | orderBy:'last' | orderBy:'first'">
+  <button ng-click="delete(guest)">Borrar</button>
+  <button ng-click="update(guest)">Actualizar</button>
+  {{ $index + 1 }}.
+  <p><b>Tipo de personaje: {{ guest.TIPODEPERSONAJE }}</b> </p>
+  <p>Nombre de personaje: {{ guest.nombredepersonaje }}</p>
+  <p>Nombre de jugador: {{ guest.nombredejugador }}</p>
+  <p>Altura: {{ guest.Altura }}</p>
+  <p>Peso: {{ guest.peso }}</p>
+  <p>Sexo: {{ guest.Sexo }}</p>
+  <p>Edad: {{ guest.Edad }}</p>
+  <p>Descripción Física: {{ guest.descripcionfisica }}</p>
+</div>

@@ -1,0 +1,9 @@
+.status {
+  color: blue;
+  padding: 1em;
+  height: 1em;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid black;
+}
