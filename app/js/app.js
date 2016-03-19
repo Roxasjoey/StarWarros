@@ -42,6 +42,10 @@ App.config(function($routeProvider) {
     controller : 'InsertCtrl',
     templateUrl: '/partials/Habilidades.html',
   });
+  $routeProvider.when('/Varios', {
+  controller : 'InsertCtrl',
+  templateUrl: '/partials/Varios.html',
+});
   $routeProvider.when('/update/:id', {
     controller : 'UpdateCtrl',
     templateUrl: '/partials/update.html',
