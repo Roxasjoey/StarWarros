@@ -1,40 +1,431 @@
-<h2>Crear Personaje</h2>
+<h2 xmlns="http://www.w3.org/1999/html">Crear Personaje</h2>
 <form ng-submit="submitInsert()">
-  <p>
-    <label>Tipo de Personaje:</label>
-    <input type="text" ng-model="TIPODEPERSONAJE" autofocus="true" />
-  </p>
 
-  <p>
-    <label>Nombre de Personaje:</label>
-    <input type="text"  ng-model="nombredepersonaje" />
-  </p>
-  <p>
-    <label>Nombre de Jugador:</label>
-    <input type="text"  ng-model="nombredejugador" />
-  </p>
-  <p>
-    <label>Altura:</label>
-    <input type="text"  ng-model="Altura" />
+    <p>
+        <label>Nombre de personaje:</label>
+        <input type="text" ng-model="dato1"/>
 
+        <label>Nombre de jugador:</label>
+        <input type="text" ng-model="dato2"/>
 
+        <label>Especie:</label>
+        <input type="text" ng-model="dato3"/>
 
-    <label>Peso:</label>
-    <input type="text"  ng-model="peso" />
+        <label>Profesión:</label>
+        <input type="text" ng-model="dato4"/>
+    </p>
+    <p>
+        <label>Altura:</label>
+        <input type="text" ng-model="dato5"/>
 
+        <label>Peso:</label>
+        <input type="text" ng-model="dato6"/>
 
+        <label>Sexo:</label>
+        <input type="text" ng-model="dato7"/>
 
-    <label>Sexo:</label>
-    <input type="text"  ng-model="Sexo" />
+        <label>Edad:</label>
+        <input type="text" ng-model="dato8"/>
+    </p>
+    <p>
+        <label>Pelo:</label>
+        <input type="text" ng-model="dato9"/>
 
+        <label>Ojos:</label>
+        <input type="text" ng-model="dato10"/>
 
+        <label>Piel:</label>
+        <input type="text" ng-model="dato11"/>
 
-    <label>Edad:</label>
-    <input type="text"  ng-model="Edad" />
-  </p>
-  <p>
-    <label>Descripción Física:</label>
-    <input  type="text" ng-model="descripcionfisica" />
-  </p>
-  <input type="submit" class="btn"/>
+        <label>Sistema respiratorio:</label>
+        <input type="text" ng-model="dato12"/>
+    </p>
+    <p>
+        <label>Habilidades raciales:</label>
+        <input type="text" ng-model="dato13"/>
+
+        <label>Planeta natal:</label>
+        <input type="text" ng-model="dato14"/>
+
+        <label>Rango en la fuerza/militar:</label>
+        <input type="text" ng-model="dato15"/>
+    </p>
+    <p>
+        <label>Descripción física/Aspecto(3d6):</label>
+        <input type="text" ng-model="dato16"/>
+    </p>
+
+    <h2>Habilidades</h2>
+    <div style="padding: 10px; float: left; width: 45%; text-align: justify;">
+
+        <h2>Destreza</h2>
+
+        <p>
+            <label>Blaster:</label>
+            <input type="text" ng-model="hab1" autofocus="true"/>
+        </p>
+        <p>
+            <label>Parar sin armas:</label>
+            <input type="text" ng-model="hab2"/>
+        </p>
+        <p>
+            <label>Esquivar:</label>
+            <input type="text" ng-model="hab3"/>
+        </p>
+        <p>
+            <label>Granada:</label>
+            <input type="text" ng-model="hab4"/>
+        </p>
+        <p>
+            <label>Armas pesadas:</label>
+            <input type="text" ng-model="hab5"/>
+        </p>
+        <p>
+            <label>Parar con armas:</label>
+            <input type="text" ng-model="hab6"/>
+        </p>
+        <p>
+            <label>Atacar con armas:</label>
+            <input type="text" ng-model="hab7"/>
+        </p>
+        <p>
+            <label>*Sable de luz:</label>
+            <input type="text" ng-model="hab8"/>
+        </p>
+
+        <h2>Conocimientos</h2>
+        <p>
+            <label>Razas alienigenas:</label>
+            <input type="text" ng-model="hab9" autofocus="true"/>
+        </p>
+        <p>
+            <label>Burocracia:</label>
+            <input type="text" ng-model="hab10"/>
+        </p>
+        <p>
+            <label>Culturas:</label>
+            <input type="text" ng-model="hab11"/>
+        </p>
+        <p>
+            <label>Lenguas:</label>
+            <input type="text" ng-model="hab12"/>
+        </p>
+        <p>
+            <label>Sistemas planetarios:</label>
+            <input type="text" ng-model="hab13"/>
+        </p>
+        <p>
+            <label>Bajos fondos:</label>
+            <input type="text" ng-model="hab14"/>
+        </p>
+        <p>
+            <label>Supervivencia:</label>
+            <input type="text" ng-model="hab15"/>
+        </p>
+        <p>
+            <label>Tecnologia:</label>
+            <input type="text" ng-model="hab16"/>
+        </p>
+
+        <h2>Mecanica</h2>
+        <p>
+            <label>Astrogracion:</label>
+            <input type="text" ng-model="hab17"/>
+        </p>
+        <p>
+            <label>Cabalgar:</label>
+            <input type="text" ng-model="hab18"/>
+        </p>
+        <p>
+            <label>Manejar repulsores:</label>
+            <input type="text" ng-model="hab19"/>
+        </p>
+        <p>
+            <label>Artilleria naval:</label>
+            <input type="text" ng-model="hab20"/>
+        </p>
+        <p>
+            <label>Pilotaje naval:</label>
+            <input type="text" ng-model="hab21"/>
+        </p>
+        <p>
+            <label>Ecudos navales:</label>
+            <input type="text" ng-model="hab22"/>
+        </p>
+        <p>
+            <label>Manejar andadores:</label>
+            <input type="text" ng-model="hab23"/>
+        </p>
+        <p>
+            <label>Sensores:</label>
+            <input type="text" ng-model="hab24"/>
+        </p>
+
+        <h2>Otros</h2>
+
+        <p>
+            <label>Puntos de fuerza:</label>
+            <input type="text" ng-model="hab25"/>
+        </p>
+        <p>
+            <label>Puntos del lado oscuro:</label>
+            <input type="text" ng-model="hab26"/>
+        </p>
+        <p>
+            <label>Estado de salud:</label>
+            <input type="text" ng-model="hab27"/>
+        </p>
+        <p>
+            <label>Puntos de habilidad:</label>
+            <input type="text" ng-model="hab28"/>
+        </p>
+
+        <div>
+
+            <h2>Armas</h2>
+            <p>
+                <label>Arma 1:</label>
+                <input type="text" ng-model="var1" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var2" autofocus="true"/>
+            </p>
+
+            <label>Alcance: C</label>
+            <input type="text" ng-model="var3" autofocus="true"/>
+
+            <label>M</label>
+            <input type="text" ng-model="var4" autofocus="true"/>
+
+            <label>L</label>
+            <input type="text" ng-model="var5" autofocus="true"/>
+
+            <p>
+                <label>Arma 2:</label>
+                <input type="text" ng-model="var6" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var7" autofocus="true"/>
+            </p>
+
+            <label>Alcance: C</label>
+            <input type="text" ng-model="var8" autofocus="true"/>
+
+            <label>M</label>
+            <input type="text" ng-model="var9" autofocus="true"/>
+
+            <label>L</label>
+            <input type="text" ng-model="var10" autofocus="true"/>
+
+            <p>
+                <label>Arma 3:</label>
+                <input type="text" ng-model="var11" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var12" autofocus="true"/>
+            </p>
+
+            <label>Alcance: C</label>
+            <input type="text" ng-model="var13" autofocus="true"/>
+
+            <label>M</label>
+            <input type="text" ng-model="var14" autofocus="true"/>
+
+            <label>L</label>
+            <input type="text" ng-model="var15" autofocus="true"/>
+
+            <p>
+                <label>Arma 4:</label>
+                <input type="text" ng-model="var16" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var17" autofocus="true"/>
+            </p>
+
+            <label>Alcance: C</label>
+            <input type="text" ng-model="var18" autofocus="true"/>
+
+            <label>M</label>
+            <input type="text" ng-model="var19" autofocus="true"/>
+
+            <label>L</label>
+            <input type="text" ng-model="var20" autofocus="true"/>
+
+            <p>
+                <label>Arma 5:</label>
+                <input type="text" ng-model="var21" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var22" autofocus="true"/>
+            </p>
+
+            <label>Alcance: C</label>
+            <input type="text" ng-model="var23" autofocus="true"/>
+
+            <label>M</label>
+            <input type="text" ng-model="var24" autofocus="true"/>
+
+            <label>L</label>
+            <input type="text" ng-model="var25" autofocus="true"/>
+
+            </p>
+
+            <p>
+                <label>Melé 1:</label>
+                <input type="text" ng-model="var26" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var27" autofocus="true"/>
+
+                <label>Dificil:</label>
+                <input type="text" ng-model="var28" autofocus="true"/>
+            <p>
+                <label>Melé 2:</label>
+                <input type="text" ng-model="var29" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var30" autofocus="true"/>
+
+                <label>Dificil:</label>
+                <input type="text" ng-model="var31" autofocus="true"/>
+            <p>
+                <label>Melé 3:</label>
+                <input type="text" ng-model="var32" autofocus="true"/>
+
+                <label>Daño:</label>
+                <input type="text" ng-model="var33" autofocus="true"/>
+
+                <label>Dificil:</label>
+                <input type="text" ng-model="var34" autofocus="true"/>
+
+            </p>
+        </div>
+
+        <input type="submit" class="btn"/>
+    </div>
+    <div style="padding: 10px; float: right; width: 45%; text-align: justify;">
+
+        <h2>Percepción</h2>
+
+        <p>
+            <label>Negociar:</label>
+            <input type="text" ng-model="hab29" autofocus="true"/>
+        </p>
+        <p>
+            <label>Mando:</label>
+            <input type="text" ng-model="hab30"/>
+        </p>
+        <p>
+            <label>Timar:</label>
+            <input type="text" ng-model="hab31"/>
+        </p>
+        <p>
+            <label>Jugar:</label>
+            <input type="text" ng-model="hab32"/>
+        </p>
+        <p>
+            <label>Esconderse/Fugitivo:</label>
+            <input type="text" ng-model="hab33"/>
+        </p>
+        <p>
+            <label>Buscar:</label>
+            <input type="text" ng-model="hab34"/>
+        </p>
+        <p>
+            <label>Persuadir:</label>
+            <input type="text" ng-model="hab35"/>
+        </p>
+
+        <h2>Fortaleza</h2>
+
+        <p>
+            <label>Atacar sin armas:</label>
+            <input type="text" ng-model="hab36" autofocus="true"/>
+        </p>
+        <p>
+            <label>Escalar/Saltar:</label>
+            <input type="text" ng-model="hab37"/>
+        </p>
+        <p>
+            <label>Levantar:</label>
+            <input type="text" ng-model="hab38"/>
+        </p>
+        <p>
+            <label>Vigor:</label>
+            <input type="text" ng-model="hab39"/>
+        </p>
+        <p>
+            <label>Nadar:</label>
+            <input type="text" ng-model="hab40"/>
+        </p>
+
+        <h2>Tenica</h2>
+        <p>
+            <label>Prog./Rep.computadores:</label>
+            <input type="text" ng-model="hab41"/>
+        </p>
+
+        <p>
+            <label>Demolicion:</label>
+            <input type="text" ng-model="hab42"/>
+        </p>
+        <p>
+            <label>Prog./Rep.Droides:</label>
+            <input type="text" ng-model="hab43"/>
+        </p>
+        <p>
+            <label>Medicina:</label>
+            <input type="text" ng-model="hab44"/>
+        </p>
+        <p>
+            <label>Rep.repulsores:</label>
+            <input type="text" ng-model="hab45"/>
+        </p>
+        <p>
+            <label>Seguridad:</label>
+            <input type="text" ng-model="hab46"/>
+        </p>
+        <p>
+            <label>Rep.naves espaciales:</label>
+            <input type="text" ng-model="hab47"/>
+        </p>
+        <p>
+            <label>*Rep./Fab.sable luz:</label>
+            <input type="text" ng-model="hab48"/>
+        </p>
+
+        <h2>Jedi</h2>
+        <p>
+            <label>Sentir:</label>
+            <input type="text" ng-model="hab49"/>
+
+            <label>Controlar:</label>
+            <input type="text" ng-model="hab50"/>
+        </p>
+        <p>
+            <label>Alterar:</label>
+            <input type="text" ng-model="hab51"/>
+        </p>
+
+        <h2>Info</h2>
+        <p>
+            <label>Historial:</label>
+            <input type="text" ng-model="info1" autofocus="true"/>
+        </p>
+        <p>
+            <label>Personalidad/Descripcion:</label>
+            <input type="text" ng-model="info2" autofocus="true"/>
+        </p>
+        <p>
+            <label>Conexion con otros personajes:</label>
+            <input type="text" ng-model="info3" autofocus="true"/>
+        </p>
+        <p>
+            <label>Equipo:</label>
+            <input type="text" ng-model="info4" autofocus="true"/>
+        </p>
+
+    </div>
+
 </form>
+
