@@ -2,18 +2,59 @@
 
 var App = angular.module('App', ['ngRoute']);
 
-App.factory('myHttpInterceptor', function ($rootScope, $q) {
-    return {
-        'requestError': function (config) {
-            $rootScope.status = 'HTTP REQUEST ERROR ' + config;
-            return config || $q.when(config);
-        },
-        'responseError': function (rejection) {
-            $rootScope.status = 'HTTP RESPONSE ERROR ' + rejection.status + '\n' +
-                rejection.data;
-            return $q.reject(rejection);
-        },
-    };
+
+App.factory('myHttpInterceptor', function($rootScope, $q) {
+  return {
+    'requestError': function(config) {
+      $rootScope.status = 'HTTP REQUEST ERROR ' + config;
+      return config || $q.when(config);
+    },
+    'responseError': function(rejection) {
+      $rootScope.status = 'HTTP RESPONSE ERROR ' + rejection.status + '\n' +
+                          rejection.data;
+      return $q.reject(rejection);
+    },
+  };
+});
+
+App.factory('guestService', function($rootScope, $http, $q, $log) {
+  $rootScope.status = 'Retrieving data...';
+  var deferred = $q.defer();
+  $http.get('rest/query')
+  .success(function(data, status, headers, config) {
+    $rootScope.guests = data;
+    deferred.resolve();
+    $rootScope.status = '';
+  });
+  return deferred.promise;
+});
+
+App.config(function($routeProvider) {
+  $routeProvider.when('/', {
+    controller : 'MainCtrl',
+    templateUrl: '/partials/main.html',
+    resolve    : { 'guestService': 'guestService' },
+  });
+  $routeProvider.when('/invite', {
+    controller : 'InsertCtrl',
+    templateUrl: '/partials/insert.html',
+  });
+  $routeProvider.when('/Habilidades', {
+    controller : 'InsertCtrl',
+    templateUrl: '/partials/Habilidades.html',
+  });
+  $routeProvider.when('/Varios', {
+  controller : 'InsertCtrl',
+  templateUrl: '/partials/Varios.html',
+});
+  $routeProvider.when('/update/:id', {
+    controller : 'UpdateCtrl',
+    templateUrl: '/partials/update.html',
+    resolve    : { 'guestService': 'guestService' },
+  });
+  $routeProvider.otherwise({
+    redirectTo : '/'
+  });
 });
 
 App.factory('guestService', function ($rootScope, $http, $q, $log) {
